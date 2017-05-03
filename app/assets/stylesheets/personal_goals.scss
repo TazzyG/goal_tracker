@@ -1,0 +1,38 @@
+#personal_goals h2 {
+  font-size: 16px;
+  margin-bottom: 2px;
+  margin-top: 20px;
+}
+
+#personal_goals h2 .personal_goal_trackers {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#personal_goals .info {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+#personal_goal_trackers {
+  font-size: 12px;
+  background-color: #EEE;
+  padding: 0 20px;
+  width: 325px;
+  border: solid 1px #777;
+}
+
+.personal_goal_tracker {
+  border-bottom: solid 1px #999;
+  margin: 15px 0;
+}
+
+.personal_goal_tracker:last-child {
+  border-bottom: none;
+}
+
+.personal_goal_tracker .author_name {
+  font-weight: bold;
+}

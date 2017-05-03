@@ -1,0 +1,14 @@
+<h1> Personal Goals </h1>
+<div id = "personal_goals"> 
+	<% @personal_goals.each do |personal_goal| %>
+	<h2> 
+		<%= link_to personal_goal.name, personal_goal %>
+			<span class="personal_goals">(<%= pluralize(personal_goal.personal_goal_trackers.size, 'personal_goal_tracker') %>)</span>
+	</h2>
+	<div class="info">
+		Recorded on: <%= personal_goal.created_at.strftime("%a, %b %d")%> 
+		Goal: <%= personal_goal.type_of_outcome %> Target: <%= personal_goal.target %><%= personal_goal.measured_by %>
+		Progress: "coming soon"
+	</div>
+	<% end %>
+</div>
