@@ -1,14 +1,14 @@
-<h1><%= @personal_goal.name %></h1>
+<h1><%= @personal_goal.name.titleize %></h1>
 
-<p class="user"><em>by <%= @personal_goal.user.name %></em></p>
+<p class="user"><em> <%= @personal_goal.user.name %>'s Goal</em></p>
 
-<%= @personal_goal.name %>
 
 <div class="info">
     Recorded on: <%= @personal_goal.created_at.strftime("%a, %b %d")%> 
     Target: <%= @personal_goal.target %><%= @personal_goal.measured_by.pluralize %>
     <br>
-    Progress: 
+    Progress: <%= @personal_goal.progress %>  That is 
+    <%= @personal_goal.progress_in_percent %> %
 </div>
 
 <p><%= link_to "Back to personal_goals", personal_goals_path %></p>
@@ -19,7 +19,7 @@
   <div id="personal_goal_trackers">
   <% for @personal_goal_tracker in @personal_goal.personal_goal_trackers %>
     <div class="personal_goal_tracker">
-      <strong><%= @personal_goal_tracker.record_amount %> <%= @personal_goal_tracker.personal_goal.measured_by %></strong>
+      <strong><%= @personal_goal_tracker.record_amount %> </strong>
       <em>on <%= @personal_goal_tracker.created_at.strftime("%a, %b %d")%></em>
       
     </div>
